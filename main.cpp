@@ -165,7 +165,7 @@ int main() {
   // Part 1: Reading in file 
   ifstream inputFileA;
   string word;
-  inputFileA.open("fileA.txt");
+  inputFileA.open("fileB.txt");
 
   if (!inputFileA.fail())
   {
@@ -178,7 +178,7 @@ int main() {
 
   // Part 2: Writing to File
   ofstream outputFileA;
-  outputFileA.open("fileB.txt", ios::app);
+  outputFileA.open("fileA.txt", ios::app);
   outputFileA << "Me llamo Brian."<< endl;
   outputFileA.close();
 
