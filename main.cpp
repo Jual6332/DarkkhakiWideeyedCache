@@ -48,7 +48,7 @@ struct Student
   string courses[5];
 };
 
-int course_main() {
+int main() {
   // Arrays
   string userNames[2];
   userNames[0] = "Justin";
