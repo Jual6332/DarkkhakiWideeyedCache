@@ -48,6 +48,14 @@ struct Student
   string courses[5];
 };
 
+struct Node
+{
+  int value;
+  Node *next;
+};
+
+typedef Node* nodePtr;
+
 int main() {
   // Arrays
   string userNames[2];
@@ -183,11 +191,22 @@ int main() {
 
   // The individual data housed in a struct have to be assigned individually, not collectively
 
-  // Pat\rt 2: Classes
+  // Part 2: Classes
   BankAccount checking;
   BankAccount savings;
   cout << savings.getBalance() << endl;
 
+  // Part 3: Pointers
+
+  // Part 4: Linked Lists
+  // A linked list is a list of classes or structs with a defining pointer
+  // A linked list is a dynamic way to link data. No need to define a set amount of elements like in an arry
+  nodePtr head;
+  nodePtr second;
+  head->value = 10;
+  head->next = second;
+  second->value = 11;
+  second->next = NULL;
 
   return 0;
 }
