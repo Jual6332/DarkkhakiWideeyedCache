@@ -201,12 +201,20 @@ int main() {
   // Part 4: Linked Lists
   // A linked list is a list of classes or structs with a defining pointer
   // A linked list is a dynamic way to link data. No need to define a set amount of elements like in an arry
+  
   nodePtr head;
-  nodePtr second;
+  head = new Node;
   head->value = 10;
-  head->next = second;
-  second->value = 11;
-  second->next = NULL;
+  head->next = NULL;
+
+  // Print the elements in a Linked List
+  nodePtr tmp;
+  tmp = head;
+  while (tmp != NULL)
+  {
+    cout << tmp->value << endl;
+    tmp = tmp->next;
+  }
 
   return 0;
 }
