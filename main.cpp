@@ -14,7 +14,41 @@ string users[2] = {"John","Diane"};
 
 bool FindUserName(string users[],string user_name);
 
-int main() {
+class BankAccount
+{
+  private:
+    float balance;
+  public:
+    BankAccount();
+    void DepositFunds(float);
+    float getBalance();
+    void Widthdrawl(float);
+};
+
+// Constructor
+BankAccount::BankAccount(){
+  balance=0;
+}
+
+float BankAccount::getBalance()
+{
+  return balance;
+}
+
+void BankAccount::DepositFunds(float newMoney)
+{
+  balance = balance + newMoney;
+}
+
+// Struct Example
+struct Student
+{
+  int age;
+  float gpa;
+  string courses[5];
+};
+
+int course_main() {
   // Arrays
   string userNames[2];
   userNames[0] = "Justin";
@@ -136,10 +170,25 @@ int main() {
 
   // Part 2: Writing to File
   ofstream outputFileA;
-  outputFileA.open("fileB.txt");
+  outputFileA.open("fileB.txt", ios::app);
   outputFileA << "Me llamo Brian."<< endl;
   outputFileA.close();
-  
+
+  // Chapter 6: Data Structures
+  // Part 1: Structs
+  Student student1;
+  student1.courses[0]="biology";
+  student1.gpa = 3.6;
+  //"calculus 1","economics","intro to programming"};
+
+  // The individual data housed in a struct have to be assigned individually, not collectively
+
+  // Pat\rt 2: Classes
+  BankAccount checking;
+  BankAccount savings;
+  cout << savings.getBalance() << endl;
+
+
   return 0;
 }
 
